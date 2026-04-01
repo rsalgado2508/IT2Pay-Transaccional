@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+    <!-- Appender para guardar en un archivo -->
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>logFileIT2PayTransaccional.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>logFileIT2PayTransaccional.%d{yyyy-MM-dd}.log</fileNamePattern>
+            <maxHistory>7</maxHistory> <!-- Número máximo de archivos de registro históricos -->
+        </rollingPolicy>
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Appender para imprimir en la consola -->
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d [%thread] %-5level %logger{35} - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <!-- Configuración para el nivel de registro ROOT -->
+    <root level="info">
+        <appender-ref ref="FILE" />
+        <appender-ref ref="CONSOLE" />
+    </root>
+
+    <!-- Configuración para el nivel de registro DEBUG -->
+    <logger name="co.com.it2ex.it2pay" level="debug" additivity="false">
+        <appender-ref ref="FILE" />
+    </logger>
+
+</configuration>

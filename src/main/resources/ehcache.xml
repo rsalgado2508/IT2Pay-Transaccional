@@ -1,0 +1,45 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://www.ehcache.org/ehcache.xsd"
+         updateCheck="false">
+
+    <cache name="consultarValorConfiguracion"
+           maxEntriesLocalHeap="1000"
+           eternal="true">
+    </cache>
+
+    <cache name="consultarMensajePorIdioma"
+           maxEntriesLocalHeap="1000"
+           eternal="true">
+    </cache>
+
+    <cache name="consultarValorParamConfig"
+           maxEntriesLocalHeap="1000"
+           eternal="true">
+    </cache>
+
+    <cache name="consultarMenuPorLoginYRol"
+           maxEntriesLocalHeap="1000"
+           eternal="true">
+    </cache>
+
+    <cache name="obtenerNombreRol"
+           maxEntriesLocalHeap="1000"
+           eternal="true">
+    </cache>
+
+    <cache name="obtenerFuncionalidadRequiereOTPPorUrl"
+           maxEntriesLocalHeap="1000"
+           eternal="true">
+    </cache>
+
+    <cache name="consultaDatosBasicosUsuarioPorUsuarioClave"
+           maxEntriesLocalHeap="1000"
+           eternal="true">
+    </cache>
+
+    <cache name="consultarTipoBloqueo"
+           maxEntriesLocalHeap="1000"
+           eternal="true">
+    </cache>
+
+</ehcache>
