@@ -2,8 +2,8 @@ package co.com.it2ex.it2pay.util.otros.constantes.path;
 
 public class ConstantesSeguridadPathRest {
 
-    static final String serviciosPublicos = "publicTran";
-    static final String serviciosPrivados = "apiTran";
+    static final String serviciosPublicos = "public";
+    static final String serviciosPrivados = "api";
 
     //CONFIGURACION-----------------------------------------------------------------------------------------------------
 

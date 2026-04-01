@@ -46,7 +46,9 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     //@Autowired
     //private LoggerAuditoriasComponent loggerAuditoriasComponent;
 
-    private static final String STRING_URL_PROTECTED = "/apiTran/**";
+    private static final String STRING_URL_PUBLIC = "/public/**";
+
+    private static final String STRING_URL_PROTECTED = "/api/**";
 
     private static final RequestMatcher PROTECTED_URLS = new OrRequestMatcher(
             new AntPathRequestMatcher(STRING_URL_PROTECTED)
@@ -59,6 +61,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
         http
                 .authorizeRequests()
+                .antMatchers(STRING_URL_PUBLIC).permitAll()
                 .antMatchers(STRING_URL_PROTECTED).authenticated()
                 .and()
                 .authenticationProvider(provider)
